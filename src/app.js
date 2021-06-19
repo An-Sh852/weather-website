@@ -90,4 +90,4 @@ app.listen(3000, ()=>{
   console.log("Server is up on port 3000")
 })
 
-//server will send either HTML or JSON data
+
