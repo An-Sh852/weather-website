@@ -14,6 +14,8 @@ const foreCastfuncWithCallback = (long, lati, callback) => {
         feelslike: response.body.current.feelslike,
         temprature: response.body.current.temperature,
         weather_descriptions: response.body.current.weather_descriptions,
+        humidity: response.body.current.humidity,
+        precip: response.body.current.precip
       })
     }
   })

@@ -50,7 +50,7 @@ app.get('/weather', (req, res) => {
       return res.send({geocodeError:  errorOfcallbackfunc})
     }
   
-    foreCastfuncWithCallback( longitude, latitude, (errorOfcallbackfunc, { temprature, feelslike, weather_descriptions } = {})=>{
+    foreCastfuncWithCallback( longitude, latitude, (errorOfcallbackfunc, { temprature, feelslike, weather_descriptions, is_day, humidity, precip} = {})=>{
      if(errorOfcallbackfunc){
       return res.send({forecastError: errorOfcallbackfunc})
     }
@@ -60,6 +60,8 @@ app.get('/weather', (req, res) => {
         feelslike: feelslike,
         weatherDescription: weather_descriptions,
         location: location,
+        humidity: humidity,
+        precip: precip
       })
     })
   })

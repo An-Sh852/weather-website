@@ -12,7 +12,7 @@ weatherForm.addEventListener('submit', (e)=>{
       if (data.error) {
         return resultDiv.textContent = data.error
       }
-      resultDiv.textContent = `It is ${data.temp} deg celsius in ${data.location}. It feels like ${data.feelslike} deg celsius`
+      resultDiv.textContent = `It is ${data.temp} deg celsius in ${data.location}. It feels like ${data.feelslike} deg celsius. There is a ${data.precip}% chances of raining. Humidity is ${data.humidity}%.`
     })
   })
 })
